@@ -1,15 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class KeystrokeReader : MonoBehaviour {
 
     [SerializeField]
     Transform keyboard;
+    [SerializeField]
+    InputField inf;
 
 	// Use this for initialization
 	void Start () {
-		
+        //EventSystem.current.SetSelectedGameObject(inf.gameObject, null);
+        //inf.OnPointerClick(new PointerEventData(EventSystem.current));
+        inf.ActivateInputField();
 	}
 
     // Update is called once per frame
@@ -23,13 +29,13 @@ public class KeystrokeReader : MonoBehaviour {
         if (e.type == EventType.KeyDown)
         {
             //if (e.keyCode == KeyCode.None) Debug.Log("The detected character is: " + e.character);
-            //else if (e.character == '\0') Debug.Log("The detected keycode is: " + e.keyCode);
+            //if (e.character == '\0') Debug.Log("The detected keycode is: " + e.keyCode);
             foreach (Transform key in keyboard)
             {
                 if (key.name == e.keyCode.ToString())
                 {
                     key.gameObject.GetComponent<MeshRenderer>().material.color = Color.cyan;
-                    key.position = new Vector3(key.position.x, key.position.y - 0.1f, key.position.z);
+                    //key.position = new Vector3(key.position.x, key.position.y - 0.01f, key.position.z);
                 }
             }
 
@@ -43,9 +49,13 @@ public class KeystrokeReader : MonoBehaviour {
                 if (key.name == e.keyCode.ToString())
                 {
                     key.gameObject.GetComponent<MeshRenderer>().material.color = Color.white;
-                    key.position = new Vector3(key.position.x, key.position.y + 0.1f, key.position.z);
+                    //key.position = new Vector3(key.position.x, key.position.y + 0.01f, key.position.z);
                 }
             }
+        }
+        else if (e.shift)
+        {
+            //Debug.Log(e.character + " " + e.keyCode);
         }
     }
 }

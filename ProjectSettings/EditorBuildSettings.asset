@@ -4,4 +4,7 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/keyboard_testing.unity
+    guid: a23c933e0f1bdc742b9d0f0d53b6aabd
