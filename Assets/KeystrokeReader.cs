@@ -15,7 +15,7 @@ public class KeystrokeReader : MonoBehaviour {
 	void Start () {
         //EventSystem.current.SetSelectedGameObject(inf.gameObject, null);
         //inf.OnPointerClick(new PointerEventData(EventSystem.current));
-        inf.ActivateInputField();
+        //inf.ActivateInputField();
 	}
 
     // Update is called once per frame
