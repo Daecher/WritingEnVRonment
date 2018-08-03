@@ -10,8 +10,7 @@ This is a personal project meant to practice developing for Oculus, as well as e
 
 ### To-do list
 - [X] Basic input recognition
-- [ ] File saving
-- [ ] File loading
+- [X] File saving
 - [ ] Custom keyboard model
 - [ ] UI for time and stopwatch
 - [ ] UI for environment switching
