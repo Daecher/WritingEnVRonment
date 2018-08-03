@@ -529,7 +529,7 @@ MonoBehaviour:
   m_InputType: 0
   m_AsteriskChar: 42
   m_KeyboardType: 0
-  m_LineType: 0
+  m_LineType: 2
   m_HideMobileInput: 0
   m_CharacterValidation: 0
   m_CharacterLimit: 0
@@ -1235,7 +1235,7 @@ MonoBehaviour:
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 0
-    m_HorizontalOverflow: 1
+    m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 
@@ -4098,7 +4098,7 @@ GameObject:
   - component: {fileID: 1387348027}
   - component: {fileID: 1387348026}
   m_Layer: 5
-  m_Name: Session Time (1)
+  m_Name: WPM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4119,8 +4119,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 107.1, y: 81.299995}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 77.1, y: 81.299995}
+  m_SizeDelta: {x: 61.01, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1387348026
 MonoBehaviour:
@@ -4151,8 +4151,8 @@ MonoBehaviour:
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 'WPM:'
 --- !u!222 &1387348027
@@ -4452,6 +4452,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 114707778192037640, guid: 7f0e09c9cf7a3ed45b92b3e2b3e11e9d,
+        type: 2}
+      propertyPath: WPMText
+      value: 
+      objectReference: {fileID: 1387348026}
+    - target: {fileID: 114707778192037640, guid: 7f0e09c9cf7a3ed45b92b3e2b3e11e9d,
+        type: 2}
+      propertyPath: Timer
+      value: 
+      objectReference: {fileID: 995698450}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f0e09c9cf7a3ed45b92b3e2b3e11e9d, type: 2}
   m_IsPrefabParent: 0
