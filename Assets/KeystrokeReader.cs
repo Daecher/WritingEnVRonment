@@ -15,16 +15,17 @@ public class KeystrokeReader : MonoBehaviour {
 	void Start () {
         //EventSystem.current.SetSelectedGameObject(inf.gameObject, null);
         //inf.OnPointerClick(new PointerEventData(EventSystem.current));
-        //inf.ActivateInputField();
+        inf.ActivateInputField();
 	}
 
     // Update is called once per frame
     void Update() {
-        
+       // Debug.Log(inf.text);
 	}
 
     private void OnGUI()
     {
+        
         Event e = Event.current;
         if (e.type == EventType.KeyDown)
         {
