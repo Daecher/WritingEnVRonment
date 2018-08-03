@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
@@ -20,7 +21,12 @@ public class KeystrokeReader : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-       // Debug.Log(inf.text);
+        // Debug.Log(inf.text);
+        
+        /*foreach(string line in text)
+        {
+            Debug.Log(line);
+        }*/
 	}
 
     private void OnGUI()
@@ -38,6 +44,18 @@ public class KeystrokeReader : MonoBehaviour {
                     key.gameObject.GetComponent<MeshRenderer>().material.color = Color.cyan;
                     //key.position = new Vector3(key.position.x, key.position.y - 0.01f, key.position.z);
                 }
+            }
+
+            if (e.keyCode == KeyCode.F1)
+            {
+                var text = inf.text.Split('\n');
+                string testPath = Application.dataPath + "/../ExportedSessions/";
+                if (!Directory.Exists(testPath))
+                {
+                    Directory.CreateDirectory(testPath);
+                }
+                File.WriteAllLines(testPath + System.DateTime.Now.ToString("dd-MM-yyyy--H-mm-ss") + ".txt", text);
+                Debug.Log(System.DateTime.Now.ToString("dd-MM-yyyy--H-mm-ss"));
             }
 
             //Debug.Log("The detected keycode is: " + e.keyCode + ". The detected character is: " + e.character);
